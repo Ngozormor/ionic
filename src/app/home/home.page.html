@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculatrice
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="container">
+
+  <ion-item>
+    <ion-label class="resultat">
+      <h3>  {{value}}</h3>
+    </ion-label>
+  </ion-item>
+
+  <div class="button" *ngFor="let numGroup of numberGroups">
+    <ion-button  class="btn" *ngFor="let num of numGroup" (click)="onButtonPress(num)">{{num}}</ion-button>
+  </div>
+
+</ion-content>
